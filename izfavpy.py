@@ -8,7 +8,14 @@ def iz_range(start, end, step):
     start += step
         
         
-        
-def mapval(value_to_map, begin_val, end_val, begin_mapto, end_mapto):
-  pass
-  
+def mapval(value, leftMin, leftMax, rightMin, rightMax):
+  # Figure out how 'wide' each range is
+  leftSpan = leftMax - leftMin
+  rightSpan = rightMax - rightMin
+
+  # Convert the left range into a 0-1 range (float)
+  valueScaled = float(value - leftMin) / float(leftSpan)
+
+  # Convert the 0-1 range into a value in the right range.
+  return rightMin + (valueScaled * rightSpan)
+
