@@ -9,6 +9,6 @@ def iz_range(start, end, step):
         
         
         
-def map(value_to_map, begin_val, end_val, begin_mapto, end_mapto):
+def mapval(value_to_map, begin_val, end_val, begin_mapto, end_mapto):
   pass
   
